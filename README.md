@@ -1,8 +1,8 @@
-Analyse de Sentiments avec Flask
+Analyse de Sentiments avec Flask :
 
 Ce projet utilise Flask pour créer une application web permettant d'analyser le sentiment d'un texte en utilisant deux méthodes : TextBlob et NLTK's Vader.
 
-Prérequis
+Prérequis :
 
 Avant de commencer, assurez-vous d'avoir Python et Flask installés sur votre système. Vous pouvez installer les dépendances nécessaires en exécutant :
 
@@ -11,7 +11,7 @@ Avant de commencer, assurez-vous d'avoir Python et Flask installés sur votre sy
 
 
 
-Fonctionnalités
+Fonctionnalités :
 
 L'application offre les fonctionnalités suivantes :
 
@@ -20,7 +20,7 @@ Analyse de Sentiments avec TextBlob : Utilisation de TextBlob pour déterminer s
 Analyse de Sentiments avec NLTK's Vader : Utilisation de NLTK's Vader pour calculer les pourcentages de positivité, négativité et neutralité dans le texte.
 
 
-Structure du Projet
+Structure du Projet :
 
 app.py : Contient le code principal de l'application Flask.
 templates/ :
@@ -29,7 +29,7 @@ index.html : Formulaire pour saisir le texte à analyser et affichage des résul
 
 
 
-Utilisation
+Utilisation :
 
 1- Clonez ce repository 
 2- Lancez l'application avec python app.py
