@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Télécharger une Image</title>
+    <style>
+        .color-box {
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+            margin: 5px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Télécharger une Image</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <br>
+        <button type="submit">Télécharger et Recadrer</button>
+    </form>
+    
+    {% if colors %}
+        <h2>Couleurs Dominantes :</h2>
+        <div>
+            {% for color in colors %}
+                <div class="color-box" style="background-color: rgb({{ color[0] }}, {{ color[1] }}, {{ color[2] }});"></div>
+            {% endfor %}
+        </div>
+    {% endif %}
+    
+    <a href="{{ url_for('home') }}">Retour à l'Accueil</a>
+</body>
+</html>

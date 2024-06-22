@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Analyse des Sentiments</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            margin: 20px auto;
+            width: 80%;
+            max-width: 600px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin: 20px auto;
+            width: 80%;
+            max-width: 600px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .joke {
+            margin-top: 40px;
+            font-style: italic;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <h1>Analyse des Sentiments</h1>
+    <form method="POST">
+        <textarea name="text" rows="10" placeholder="Saisissez votre texte ici..."></textarea><br>
+        <input type="submit" value="Analyser">
+    </form>
+    {% if sentiment_result %}
+        <div class="result">
+            <h2>Résultat</h2>
+            <p>{{ sentiment_result }}</p>
+        </div>
+    {% endif %}
+    <div class="joke">
+        <p>Pourquoi les ordinateurs n'ont-ils jamais de bons sentiments ? Parce qu'ils n'ont pas d'émotions, seulement des 1 et des 0 !</p>
+    </div>
+</body>
+</html>
